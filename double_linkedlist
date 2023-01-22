@@ -1,0 +1,74 @@
+#A double linked list is a data structure that consists of a set of nodes, 
+#where each node contains two pointers: one pointing to the previous node and one pointing to the next #node in the list. This allows for efficient traversal in both forward and backward directions. 
+#It also allows for efficient insertion and deletion of elements, as the pointers of the surrounding 
+#nodes can be easily updated. 
+#It is typically used in applications such as undo/redo stacks and LRU caches.
+
+
+
+
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.prev = None
+        self.next = None
+
+class DoubleLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.prev = self.tail
+            self.tail.next = new_node
+            self.tail = new_node
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head.prev = new_node
+        self.head = new_node
+
+    def delete(self, data):
+        current_node = self.head
+        while current_node is not None:
+            if current_node.data == data:
+                if current_node.prev is not None:
+                    current_node.prev.next = current_node.next
+                if current_node.next is not None:
+                    current_node.next.prev = current_node.prev
+                if current_node == self.head:
+                    self.head = current_node.next
+                if current_node == self.tail:
+                    self.tail = current_node.prev
+                return
+            current_node = current_node.next
+
+    def print_list(self):
+        current_node = self.head
+        while current_node is not None:
+            print(current_node.data)
+            current_node = current_node.next
+
+dl_list = DoubleLinkedList()
+dl_list.append(1)
+dl_list.append(2)
+dl_list.append(3)
+dl_list.insert_at_beginning(0)
+dl_list.delete(2)
+dl_list.print_list()
+
+
+
+# The double linked list class has three pointers:-
+#1.head
+#2.tail
+#3.current_node
+
