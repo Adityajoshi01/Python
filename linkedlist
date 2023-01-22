@@ -1,6 +1,6 @@
 #Linked list:-1.It is a liner data structure that stores  collection of data element dynamically.
              #2.Node represent those data elements and pointers connect each node.
-	     #3.Each node consists of two fields, info stroed in a linked list and pointer that stores                #address of its next node.
+	     #3.Each node consists of two fields, info stroed in a linked list and pointer that stores address of its next node.
 	     #4.Last node contains null in its second field vecause it will point to no node.
 
 
