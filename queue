@@ -1,0 +1,41 @@
+
+#A queue is a type of data structure that follows the First In, First Out (FIFO) principle. 
+#This means that the first item added to the queue will be the first one to be removed. 
+#An example of a queue would be a line of people waiting to buy tickets at a concert.
+#The person at the front of the line is the next one to be served (i.e. the first one in the queue), 
+#while the person at the back of the line is the last one to be served (i.e. the last one in the queue)
+
+
+
+
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop(0)
+
+    def size(self):
+        return len(self.queue)
+
+# Usage example
+q = Queue()
+q.enqueue(1)
+q.enqueue(2)
+q.enqueue(3)
+print(q.dequeue()) # prints 1
+print(q.dequeue()) # prints 2
+print(q.size()) # prints 1
+
+
+
+
+#Defined three methods of queue:
+#1. enqueue():- Method used to add an item to queue.
+#2. dequeue():- Method used to remove an item from queue. it will follow thw FIFO principle
+#3. size():- Method used to return the number of item currently in the queue.
