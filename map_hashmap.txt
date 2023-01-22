@@ -1,0 +1,8 @@
+A map is a container that stores elements in a key-value format, 
+where each key is unique and is used to access its corresponding value. 
+
+A hash map is a specific implementation of a map, where the keys are hashed to provide efficient access to the corresponding values. 
+
+The main difference between the two is that map is an abstract data type, while hash map is a concrete implementation of the map data type.
+Hash map is more efficient in terms of time complexity for searching, insertion and deletion 
+compared to map.
