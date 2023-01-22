@@ -1,0 +1,49 @@
+#A stack is a data structure that follows the Last In First Out (LIFO) principle, 
+#meaning the last element added to the stack will be the first one to be removed. 
+#An example of this would be a stack of plates. If you add a plate to the top of the stack, 
+#it will be the first one to be taken off if you remove a plate. 
+#In programming, a stack can be implemented using an array or a linked list.
+
+
+
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.is_empty():
+            return self.items.pop()
+
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def get_stack(self):
+        return self.items
+
+stack = Stack()
+stack.push(1)
+stack.push(2)
+stack.push(3)
+print(stack.get_stack()) # prints [1, 2, 3]
+print(stack.pop()) # prints 3
+print(stack.pop()) # prints 2
+print(stack.pop()) # prints 1
+print(stack.pop()) # returns None
+
+
+
+
+# __init__: Initializes an empty stack
+# push: adds an item to the top of the stack
+# pop: removes the top item from the stack
+# peek: returns the top item of the stack without removing it
+# is_empty: returns true if the stack is empty
+# get_stack: returns the current stack
