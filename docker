@@ -1,0 +1,20 @@
+docker run: Runs a command in a new container. For example, docker run ubuntu will start a new 
+container running the latest version of Ubuntu.
+
+docker start: Starts one or more stopped containers. For example, docker start my_container will start the container named "my_container".
+
+docker stop: Stops one or more running containers. For example, docker stop my_container will stop the container named "my_container".
+
+docker rm: Removes one or more containers. For example, docker rm my_container will remove the 
+container named "my_container".
+
+docker ps: Lists all running containers. Use docker ps -a to list all containers, including stopped 
+ones.
+
+docker images: Lists all images on the host machine.
+
+docker pull: Pulls an image from a registry, such as Docker Hub. For example, docker pull ubuntu will download the latest version of the Ubuntu image.
+
+docker push: Pushes an image to a registry. For example, docker push my_image will push the image named "my_image" to the registry specified in the image's configuration.
+
+docker exec: Run a command in a running container.
