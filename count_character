@@ -1,0 +1,17 @@
+def count(s,c): 
+    
+    result = 0
+
+    for i in range(len(s)):
+            
+	    if (s[i]==c):
+	       result = result + 1
+	    
+	    return result 
+
+
+str = "aabbcccc"
+
+c = "a"
+
+print(count(str,c))
